@@ -1,0 +1,26 @@
+[project]
+name = "daily-audio"
+version = "0.1.0"
+description = "Serviço de captura e transcrição de áudio para Markdown"
+readme = "README.md"
+authors = [
+    { name = "Renato S. Oliveira", email = "renato.santojpg@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "click>=8.4.1",
+    "faster-whisper>=1.2.1",
+    "httpx>=0.28.1",
+    "numpy>=2.4.6",
+    "realtimestt>=1.0.2",
+    "scipy>=1.17.1",
+    "sounddevice>=0.5.5",
+    "vosk>=0.3.45",
+]
+
+[project.scripts]
+daily-audio = "daily_audio.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.10.10,<0.11.0"]
+build-backend = "uv_build"
